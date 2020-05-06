@@ -10,6 +10,23 @@ Orden
 
 */
 
+:root {
+    --blue-primary: #5466b1;
+    --blue-dark: #070c24;
+
+    --red-primary: #bd4749;
+    --red-dark: #6b0f00;
+
+    --black-primary: #464749;
+    --black-dark: #000000;
+
+    --green-primary: #4a8149;
+    --green-dark: #23470f;
+
+    --orange-primary: #da5d3b;
+    --orange-dark: #562401;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +37,42 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #070c24;
+    font-family: 'Lato', sans-serif;
 }
+
+body.blue {
+    background-color: var(--blue-dark);
+}
+body.red {
+    background-color: var(--red-dark);
+}
+body.black {
+    background-color: var(--black-dark);
+}
+body.green {
+    background-color: var(--green-dark);
+}
+body.orange {
+    background-color: var(--orange-dark);
+}
+
+
+.bg-blue {
+    background-color: var(--blue-primary);
+}
+.bg-red {
+    background-color: var(--red-primary);
+}
+.bg-black {
+    background-color: var(--black-primary);
+}
+.bg-orange {
+    background-color: var(--orange-primary);
+}
+.bg-green {
+    background-color: var(--green-primary);
+}
+
 
 .container  {
     position: relative;
@@ -42,7 +92,22 @@ body {
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: #5466b1;
+}
+
+.blue .container .imgBox {
+    background-color: var(--blue-primary);
+}
+.red .container .imgBox {
+    background-color: var(--red-primary);
+}
+.black .container .imgBox {
+    background-color: var(--black-primary);
+}
+.orange .container .imgBox {
+    background-color: var(--orange-primary);
+}
+.green .container .imgBox {
+    background-color: var(--green-primary);
 }
 
 .container .imgBox:before {
@@ -112,9 +177,48 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 40px;
-    background-color: #5466b1;
     border: none;
     cursor: pointer;
+}
+
+.blue .container .details button {
+    background-color: var(--blue-primary);
+}
+.red .container .details button {
+    background-color: var(--red-primary);
+}
+.black .container .details button {
+    background-color: var(--black-primary);
+}
+.orange .container .details button {
+    background-color: var(--orange-primary);
+}
+.green .container .details button {
+    background-color: var(--green-primary);
+}
+
+
+.colors-container {
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.colors-container .button-color {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    margin-right: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 4px #0000009e;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.colors-container .button-color.selected {
+    border: 0;
+    box-shadow: 2px 2px 7px #000000d1;
 }
 
 @media (max-width: 1080px) {
