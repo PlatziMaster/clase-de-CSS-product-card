@@ -43,5 +43,4 @@ function changeColor(rgbColor) {
   img.src = `assets/img/${srcSneaker}.png`;
   container.style.backgroundColor = rgbColor;
   button.style.backgroundColor = rgbColor;
-  debugger
 }
