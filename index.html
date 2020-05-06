@@ -9,14 +9,25 @@
 <body>
     <main class="container">
         <div class="imgBox">
-            <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
+            <div class="imgBox__btn" id="prev">&#60</div>
+            <img src="./assets/img/rosada/img1.png" alt="Zapato deportivo Nike color azul, para correr">
+            <div class="imgBox__btn " id="next"">&#62</div>
         </div>
         <div class="details">
-            <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
-            <h3>$2500</h3>
-            <button>Buy now</button>
+            <h2 class="details__title">Nike Zoom 2020 <span>Runnin collection</span></h2>
+            <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
+            <h3 class="details__price">$2500</h3>
+            <button class="details__buy">Buy now</button>
+
+            <div class="details__colors">
+                <button class="details__colors__white" id="white">Blanco</button>
+                <button class="details__colors__black" id="black">Negro</button>
+                <button class="details__colors__red" id="red">Rojo</button>
+                <button class="details__colors__pink" id="pink">Rosada</button>
+            </div>
         </div>
     </main>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
