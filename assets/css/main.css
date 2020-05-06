@@ -117,6 +117,46 @@ body {
     cursor: pointer;
 }
 
+.container .colors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.container .colors button {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+
+.container .colors .black {
+    background-color: #000;
+}
+
+.container .colors .green {
+    background-color: green;
+}
+
+.container .colors .blue {
+    background-color: #5466b1;
+}
+
+.container .colors .orange {
+    background-color: #FE9A2E;
+}
+
+.container .colors .red {
+    background-color: red;
+}
+
+
 @media (max-width: 1080px) {
     .container {
         height: auto;
