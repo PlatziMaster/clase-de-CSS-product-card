@@ -102,7 +102,7 @@ body {
     color: #a2a2a2;
 }
 
-.container .details button {
+.container .details .buy-button {
     margin-top: 5px;
     float: right;
     padding: 15px 20px;
@@ -115,6 +115,37 @@ body {
     background-color: #5466b1;
     border: none;
     cursor: pointer;
+}
+
+.colors {
+    float: left;
+}
+
+.container .details .color {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.color:nth-child(1) {
+    background: #4d4f4e;
+}
+
+.color:nth-child(2) {
+    background: #629c64;
+}
+
+.color:nth-child(3) {
+    background: #5466b1;
+}
+
+.color:nth-child(4) {
+    background: #cf4f2b;
+}
+
+.color:nth-child(5) {
+    background: #af3932;
 }
 
 @media (max-width: 1080px) {
