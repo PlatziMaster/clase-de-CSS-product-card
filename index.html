@@ -9,14 +9,60 @@
 <body>
     <main class="container">
         <div class="imgBox">
-            <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
+            <img id="productImg" src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
         </div>
         <div class="details">
             <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
+            <div class="colors">
+                <button class="black"></button>
+                <button class="green"></button>
+                <button class="blue"></button>
+                <button class="orange"></button>
+                <button class="red"></button>   
+            </div>
             <h3>$2500</h3>
-            <button>Buy now</button>
+            <button class="buy-button">Buy now</button>
         </div>
     </main>
+    <script>
+        const blackColor = '#262827'
+        const greenColor = '#285114'
+        const blueColor = '#5464b1'
+        const orangeColor = '#b63800'
+        const redColor = '#912000'
+        const blackButton = document.querySelector(".black");
+        const greenButton = document.querySelector(".green");
+        const blueButton = document.querySelector(".blue");
+        const orangeButton = document.querySelector(".orange");
+        const redButton = document.querySelector(".red");
+
+        blackButton.addEventListener('click', () => {
+            document.documentElement.style
+            .setProperty('--color', blackColor);
+            document.getElementById('productImg').src="./assets/img/black-nike.png";
+        });
+        greenButton.addEventListener('click', () => {
+            document.documentElement.style
+            .setProperty('--color', greenColor);
+            document.getElementById('productImg').src="./assets/img/green-nike.png";
+        });
+        blueButton.addEventListener('click', () => {
+            document.documentElement.style
+            .setProperty('--color', blueColor);
+            document.getElementById('productImg').src="./assets/img/nike-blue.png";
+        });
+        orangeButton.addEventListener('click', () => {
+            document.documentElement.style
+            .setProperty('--color', orangeColor);
+            document.getElementById('productImg').src="./assets/img/orange-nike.png";
+        });
+        redButton.addEventListener('click', () => {
+            document.documentElement.style
+            .setProperty('--color', redColor);
+            document.getElementById('productImg').src="./assets/img/red-nike.png";
+        });
+
+    </script>
 </body>
 </html>

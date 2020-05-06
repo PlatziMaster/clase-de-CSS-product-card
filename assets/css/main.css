@@ -10,6 +10,10 @@ Orden
 
 */
 
+:root {
+    --color: #5466b1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +46,7 @@ body {
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: #5466b1;
+    background-color: var(--color);
 }
 
 .container .imgBox:before {
@@ -102,7 +106,40 @@ body {
     color: #a2a2a2;
 }
 
-.container .details button {
+.container .details .colors {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.container .details .colors button {
+    padding: 15px 15px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.black {
+    background-color: #262827;
+}
+.green {
+    background-color: #285114;
+}
+.blue {
+    background-color: #5464b1;
+}
+.orange {
+    background-color: #b63800;
+}
+.red {
+    background-color: #912000;
+}
+
+
+.container .details .buy-button {
     margin-top: 5px;
     float: right;
     padding: 15px 20px;
@@ -112,7 +149,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 40px;
-    background-color: #5466b1;
+    background-color: var(--color);
     border: none;
     cursor: pointer;
 }
