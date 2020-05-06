@@ -1,22 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product card</title>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
     <main class="container">
-        <div class="imgBox">
-            <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
+        <div class="imgBox" id="imgBox">
+            <img id="imgZ" src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
         </div>
         <div class="details">
             <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora
+                dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque
+                neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus
+                excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam
+                suscipit impedit voluptatibus. Qui, ipsam?</p>
             <h3>$2500</h3>
-            <button>Buy now</button>
+            <button id="btnBuy">Buy now</button>
+
+            <div class="colors">
+                <button class="black" onclick="changeColor('black')"></button>
+                <button class="red" onclick="changeColor('red')"></button>
+                <button class="blue" onclick="changeColor('blue')"></button>
+                <button class="orange" onclick="changeColor('orange')"></button>
+                <button class="green" onclick="changeColor('green')"></button>
+            </div>
         </div>
     </main>
 </body>
+
+<script>
+    function changeColor(color) {
+        var imgBox = document.getElementById('imgBox');
+        var image = document.getElementById("imgZ");
+        var btnBuy = document.getElementById('btnBuy');
+
+        switch (color) {
+            case 'black':
+                imgBox.style.background='#1C1C1C';
+                image.setAttribute('src','./assets/img/black-nike.png');
+                btnBuy.style.background='#1C1C1C';
+                break;
+            case 'red':
+                imgBox.style.background='#FE2E2E';
+                image.setAttribute('src','./assets/img/red-nike.png');
+                btnBuy.style.background='#FE2E2E';
+                break;
+            case 'blue':
+                imgBox.style.background='#5466b1';
+                image.setAttribute('src','./assets/img/nike-blue.png');
+                btnBuy.style.background='#5466b1';
+                break;
+            case 'orange':
+                imgBox.style.background='#FE9A2E';
+                image.setAttribute('src','./assets/img/orange-nike.png');
+                btnBuy.style.background='#FE9A2E';
+                break;
+            case 'green':
+                imgBox.style.background='green';
+                image.setAttribute('src','./assets/img/green-nike.png');
+                btnBuy.style.background='green';
+                break;
+        }
+    }
+</script>
+
 </html>
