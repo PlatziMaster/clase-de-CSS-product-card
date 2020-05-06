@@ -1,6 +1,6 @@
-/* 
+/*
 
-Orden 
+Orden
 
 1. Position
 2. Box model
@@ -23,7 +23,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #070c24;
 }
-
+.details{
+  position: relative;
+}
 .container  {
     position: relative;
     display: flex;
@@ -45,6 +47,63 @@ body {
     background-color: #5466b1;
 }
 
+.container .imgBox.imgBox-red{
+  background-color: red;
+}
+
+.container .imgBox.imgBox-black{
+  background-color: #373739;
+}
+
+.container .imgBox.imgBox-green{
+  background-color: green;
+}
+
+.details .switchButtonColor {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 2em;
+  width: 47px;
+  padding-left: 0.5em;
+  border-radius: 20px;
+  color: white;
+  background-color:#5466b1; 
+  opacity: .8;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.details .switchButtonColor.switchButtonColor-expand{
+  opacity: 1;
+  width: 210px;
+  background-color: white;
+  transition: .5s
+}
+
+.details .switchButtonColor a{
+  margin: 0 0.5em;
+  padding: 2px;
+  border-radius: 10px;
+}
+.details .switchButtonColor .redButton{
+  color: red;
+  background-color: red;
+}
+.details .switchButtonColor .blackButton{
+  color: #373739;
+  background-color: #373739;
+}
+.details .switchButtonColor .greenButton{
+  color: green;
+  background-color: green;
+}
+
+
+
 .container .imgBox:before {
     position: absolute;
     top: 20px;
@@ -62,6 +121,16 @@ body {
     width: 700px;
     transform: rotate(-30deg);
 }
+.container .imgBox_image.black{
+  display: none;
+}
+.container .imgBox_image.green{
+  display: none;
+}
+.container .imgBox_image.red{
+  display: none;
+}
+
 
 .container .details {
     display: block;
@@ -116,6 +185,7 @@ body {
     border: none;
     cursor: pointer;
 }
+
 
 @media (max-width: 1080px) {
     .container {
