@@ -56,11 +56,21 @@ body {
     opacity: 0.1;
 }
 
+.imgBox__btn{
+    margin: 0 20px;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
 .container .imgBox img {
     position: relative;
-    left: -50px;
-    width: 700px;
-    transform: rotate(-30deg);
+    /* left: -50px; */
+    margin-top: 180px;
+    width: 100%;
+    max-width: 350px;
+    /* transform: rotate(-30deg); */
 }
 
 .container .details {
@@ -73,7 +83,7 @@ body {
     padding: 40px;
 }
 
-.container .details h2 {
+.container .details__title {
     margin-top: 45px;
     margin-bottom: 25px;
     font-size: 2.5em;
@@ -81,14 +91,14 @@ body {
     color: #444;
 }
 
-.container .details h2 span {
+.container .details__title span {
     font-size: 0.4em;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #999;
 }
 
-.container .details p {
+.container .details__description {
     max-width: 85%;
     margin-left: 15%;
     margin-bottom: 35px;
@@ -96,14 +106,15 @@ body {
     font-size: 15px;
 }
 
-.container .details h3 {
+.container .details__price {
     float: left;
     font-size: 2.5em;
     color: #a2a2a2;
 }
 
-.container .details button {
+.container .details__buy {
     margin-top: 5px;
+    margin-bottom: 20px;
     float: right;
     padding: 15px 20px;
     font-size: 16px;
@@ -115,6 +126,43 @@ body {
     background-color: #5466b1;
     border: none;
     cursor: pointer;
+}
+
+.details__colors{
+    display: flex;
+    width: 100%;
+}
+
+.details__colors__white,
+.details__colors__black,
+.details__colors__red,
+.details__colors__pink{
+    padding: 5px 8px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.details__colors__white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.details__colors__black{
+    background-color: black;
+    color: white;
+}
+
+.details__colors__red{
+    background-color: red;
+    color: white;
+}
+
+.details__colors__pink{
+    background-color: pink;
+    color: black;
 }
 
 @media (max-width: 1080px) {
