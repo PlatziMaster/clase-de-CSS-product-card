@@ -15,7 +15,7 @@ Orden
     --blue-dark: #070c24;
 
     --red-primary: #bd4749;
-    --red-dark: #6b0f00;
+    --red-dark: #530c01;
 
     --black-primary: #464749;
     --black-dark: #000000;
@@ -40,23 +40,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-body.blue {
-    background-color: var(--blue-dark);
-}
-body.red {
-    background-color: var(--red-dark);
-}
-body.black {
-    background-color: var(--black-dark);
-}
-body.green {
-    background-color: var(--green-dark);
-}
-body.orange {
-    background-color: var(--orange-dark);
-}
-
-
 .bg-blue {
     background-color: var(--blue-primary);
 }
@@ -66,11 +49,28 @@ body.orange {
 .bg-black {
     background-color: var(--black-primary);
 }
+.bg-green {
+    background-color: var(--green-primary);
+}
 .bg-orange {
     background-color: var(--orange-primary);
 }
-.bg-green {
-    background-color: var(--green-primary);
+
+
+.bg-blue-dark {
+    background-color: var(--blue-dark);
+}
+.bg-red-dark {
+    background-color: var(--red-dark);
+}
+.bg-black-dark {
+    background-color: var(--black-dark);
+}
+.bg-orange-dark {
+    background-color: var(--orange-dark);
+}
+.bg-green-dark {
+    background-color: var(--green-dark);
 }
 
 
@@ -92,22 +92,6 @@ body.orange {
     align-items: center;
     width: 50%;
     height: 100%;
-}
-
-.blue .container .imgBox {
-    background-color: var(--blue-primary);
-}
-.red .container .imgBox {
-    background-color: var(--red-primary);
-}
-.black .container .imgBox {
-    background-color: var(--black-primary);
-}
-.orange .container .imgBox {
-    background-color: var(--orange-primary);
-}
-.green .container .imgBox {
-    background-color: var(--green-primary);
 }
 
 .container .imgBox:before {
@@ -180,23 +164,6 @@ body.orange {
     border: none;
     cursor: pointer;
 }
-
-.blue .container .details button {
-    background-color: var(--blue-primary);
-}
-.red .container .details button {
-    background-color: var(--red-primary);
-}
-.black .container .details button {
-    background-color: var(--black-primary);
-}
-.orange .container .details button {
-    background-color: var(--orange-primary);
-}
-.green .container .details button {
-    background-color: var(--green-primary);
-}
-
 
 .colors-container {
     display: flex;
