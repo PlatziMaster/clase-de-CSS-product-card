@@ -158,6 +158,7 @@ body {
 }
 .color-buttons .button-color:focus{
     outline-color: transparent;
+    outline: none;
     border: 4px solid #f0f0f0;
     box-sizing: border-box;
 }
