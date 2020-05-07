@@ -124,7 +124,6 @@ body {
 
 .container .details h2 {
     margin-top: 45px;
-    margin-bottom: 25px;
     font-size: 2.5em;
     line-height: 0.8em;
     color: #444;
@@ -168,7 +167,6 @@ body {
 .colors-container {
     display: flex;
     width: 100%;
-    margin-top: 12px;
 }
 
 .colors-container .button-color {
@@ -213,8 +211,18 @@ body {
         padding: 20px;
     }
 
+    .container .details h2 {
+        margin-top: 15px;
+    }
+
     .container .details p {
         max-width: 100%;
         margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 15px;
     }
 }
