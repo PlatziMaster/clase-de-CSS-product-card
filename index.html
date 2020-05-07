@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product card</title>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
     <main class="container">
-        <div class="imgBox">
-            <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
+        <div id="imgBox" class="imgBox">
+            <img id="zapato" src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
         </div>
         <div class="details">
-            <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
-            <h3>$2500</h3>
-            <button>Buy now</button>
+            <div class="content">
+                <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora
+                    dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque
+                    neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa
+                    ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae
+                    laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
+                <div class="price">
+                    <h3>$2500</h3>
+                    <button class="button-buy">Buy now</button>
+                </div>
+            </div>
+            <div class="color-buttons">
+                <span>Colors</span>
+                <button id="blueButton" class="button-color blue" onClick="changeColor('#5466b1', imgBlue, '#070c24')" autofocus ></button>
+                <button id="buttonBlack" class="button-color black" onClick="changeColor('#313131', imgBlack, '#000000')"></button>
+                <button id="greenButton" class="button-color green" onClick="changeColor('#008a2e', imgGreen, '#00290e')"></button>
+                <button id="orangeButton" class="button-color orange" onClick="changeColor('#e46600', imgOrange, '#331f00')"></button>
+                <button id="redButton" class="button-color red" onClick="changeColor('#a50000', imgRed, '#270000')"></button>
+            </div>
         </div>
     </main>
+    <script>
+        const body = document.body
+        const imgBox = document.getElementById('imgBox')
+        const image = document.getElementById('zapato')
+        const buttonBuy = document.querySelector('.button-buy')
+        
+        // filter
+        const imgBlack = 'grayscale(1)'
+        const imgGreen = 'hue-rotate(242deg)'
+        const imgBlue = 'hue-rotate(0deg)'
+        const imgOrange = 'hue-rotate(145deg)'
+        const imgRed = 'hue-rotate(118deg'
+
+        function changeColor(color, filter, darkColor) {
+            imgBox.style.backgroundColor = color;
+            image.style.filter = filter;
+            body.style.backgroundColor = darkColor;
+            buttonBuy.style.backgroundColor = color;
+        }
+        
+    </script>
 </body>
+
 </html>
