@@ -24,7 +24,7 @@ body {
     background-color: #070c24;
 }
 
-.container  {
+.container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -98,15 +98,55 @@ body {
 
 .container .details h3 {
     float: left;
+    margin-top: 5px;
     font-size: 2.5em;
     color: #a2a2a2;
 }
 
-.container .details button {
-    margin-top: 5px;
+.container .details .buyButton {
+    /*margin-top: 5px;*/
     float: right;
     padding: 15px 20px;
     font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 40px;
+    background-color: #5466b1;
+    border: none;
+    cursor: pointer;
+}
+
+.container .details .colorLoc {
+    margin-bottom: 15px;
+}
+
+.container .details .colorLoc #butBlack {
+    background-color: #434544;
+}
+
+.container .details .colorLoc #butGreen {
+    background-color: green;
+}
+
+.container .details .colorLoc #butBlue {
+    background-color: #5466b1;
+}
+
+.container .details .colorLoc #butOrange {
+    background-color: #d0461e;
+}
+
+.container .details .colorLoc #butRed {
+    background-color: #c12919;
+}
+
+.container .details .colorButton {
+    width: 100px;
+    margin: 5px;
+    padding: 10px 10px;
+    font-size: 14px;
     color: white;
     letter-spacing: 1px;
     font-weight: 600;
@@ -121,7 +161,6 @@ body {
     .container {
         height: auto;
     }
-
     .container .imgBox {
         height: auto;
         padding: 40px;
@@ -129,19 +168,16 @@ body {
         box-sizing: border-box;
         text-align: center;
     }
-
     .container .imgBox img {
         left: initial;
         max-width: 100%;
         transform: rotate(0deg);
     }
-
     .container .details {
         width: 100%;
         height: auto;
         padding: 20px;
     }
-
     .container .details p {
         max-width: 100%;
         margin-left: 0;
