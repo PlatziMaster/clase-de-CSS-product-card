@@ -1,4 +1,8 @@
 /* 
+filter: hue-rotate(45deg); */
+/* filter: invert(1); */
+/* filter: grayscale(1); */
+/* filter: brightness(0);
 
 Orden 
 
@@ -24,6 +28,10 @@ body {
     background-color: #070c24;
 }
 
+body:hover {
+    color: red;
+}
+
 .container  {
     position: relative;
     display: flex;
@@ -42,7 +50,7 @@ body {
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: #5466b1;
+    background-color: currentColor;
 }
 
 .container .imgBox:before {
@@ -115,6 +123,53 @@ body {
     background-color: #5466b1;
     border: none;
     cursor: pointer;
+}
+
+.tools {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    color: blue;
+    box-sizing: border-box;
+    z-index: 9;
+}
+
+.tools-purple {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    background-color: purple;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.tools-black {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    background-color: black;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.tools-white {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    background-color: yellow;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.tools-black:hover,
+.tools-purple:hover,
+.tools-white:hover {
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.60);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.60);
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.60);
 }
 
 @media (max-width: 1080px) {

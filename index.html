@@ -8,7 +8,23 @@
 </head>
 <body>
     <main class="container">
-        <div class="imgBox">
+        <div
+            class="tools"
+        >
+            <div
+                onclick="changeColor('purple', 'hue-rotate(45deg)')"
+                class="tools-purple"
+            ></div>
+            <div
+                onclick="changeColor('yellow', 'grayscale(100%)')"
+                class="tools-black"
+            ></div>
+            <div
+                onclick="changeColor('white', 'invert(1)')"
+                class="tools-white"
+            ></div>
+        </div>
+        <div id="cImgBox" class="imgBox">
             <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
         </div>
         <div class="details">
@@ -19,4 +35,12 @@
         </div>
     </main>
 </body>
+<script>
+
+document.body.style.color = 'red';
+function changeColor (imgBg, imgEff) {
+    document.body.style.color = imgBg;
+    document.getElementById('cImgBox').style.filter = imgEff;
+}
+</script>
 </html>
