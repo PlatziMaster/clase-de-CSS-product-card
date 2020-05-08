@@ -11,16 +11,24 @@ Orden
 */
 
 :root {
-  --color__blue--primary: hsl(228, 37%, 51%);
-  --color__blue--secondary: hsl(230, 67%, 8%);
-  --color__red--primary: hsl(1, 49%, 47%);
-  --color__red--secondary: hsl(9, 100%, 25%);
-  --color__orange--primary: hsl(12, 72%, 57%);
-  --color__orange--secondary: hsl(19, 99%, 29%);
-  --color__green--primary: hsl(121, 22%, 50%);
-  --color__green--secondary: hsl(103, 55%, 21%);
-  --color__black--primary: hsl(150, 1%, 39%);
-  --color__black--secondary: hsl(180, 1%, 16%);
+  --darkIndex: 10%;
+  --lightIndex: 50%;
+  --color__blue: hsl(228, 73%, 22%);
+  --color__red: hsl(12, 100%, 27%);
+  --color__orange: hsl(18, 100%, 38%);
+  --color__green: hsl(99, 61%, 26%);
+  --color__black: hsl(220, 4%, 14%);
+  --color__blue--primary: hsl(228, 73%, calc(22% + var(--lightIndex)));
+  --color__blue--secondary: hsl(228, 73%, calc(22% - var(--darkIndex)));
+  --color__red--primary: hsl(12, 100%, calc(27% + var(--lightIndex)));
+  --color__red--secondary: hsl(12, 100%, calc(27% - var(--darkIndex)));
+  --color__orange--primary: hsl(18, 100%, calc(38% + var(--lightIndex)));
+  --color__orange--secondary: hsl(18, 100%, calc(38% - var(--darkIndex)));
+  --color__green--primary: hsl(99, 61%, calc(26% + var(--lightIndex)));
+  --color__green--secondary: hsl(99, 61%, calc(26% - var(--darkIndex)));
+  --color__black--primary: hsl(220, 4%, calc(14% + var(--lightIndex)));
+  --color__black--secondary: hsl(220, 4%, calc(14% - var(--darkIndex)));
+  --transition: ease 0.5s;
 }
 
 * {
@@ -35,6 +43,7 @@ body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color--secondary);
+  transition: var(--transition);
 }
 
 body.blue {
@@ -80,6 +89,7 @@ body.black {
   width: 50%;
   height: 100%;
   background-color: var(--color--primary);
+  transition: var(--transition);
 }
 
 .container .imgBox:before {
@@ -88,7 +98,7 @@ body.black {
   left: 20px;
   font-size: 8em;
   font-weight: 800;
-  color: #000;
+  color: var(--color--secondary);
   content: "Nike";
   opacity: 0.1;
 }
@@ -115,14 +125,14 @@ body.black {
   margin-bottom: 25px;
   font-size: 2.5em;
   line-height: 0.8em;
-  color: #444;
+  color: var(--color--secondary);
 }
 
 .container .details h2 span {
   font-size: 0.4em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #999;
+  color: var(--color--secondary);
 }
 
 .container .details p {
@@ -136,7 +146,7 @@ body.black {
 .container .details h3 {
   float: left;
   font-size: 2.5em;
-  color: #a2a2a2;
+  color: var(--color--secondary);
 }
 
 .container .details button {
@@ -144,7 +154,7 @@ body.black {
   float: right;
   padding: 15px 20px;
   font-size: 16px;
-  color: white;
+  color: var(--color--secondary);
   letter-spacing: 1px;
   font-weight: 600;
   text-transform: uppercase;
@@ -152,12 +162,26 @@ body.black {
   background-color: var(--color--primary);
   border: none;
   cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+}
+
+.container .details button:hover {
+  background-color: var(--color--secondary);
+  color: var(--color--primary);
 }
 
 .container .colors {
   position: absolute;
-  bottom: 0;
+  bottom: 4%;
   right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: -6px 7px 17px rgba(0, 0, 0, 0.3),
+    -6px 7px 4px -5px rgba(0, 0, 0, 0.3);
 }
 
 .container .colors .colors__button {
@@ -169,24 +193,29 @@ body.black {
   border: 0;
   border-radius: 0;
   cursor: pointer;
-}
-.container .colors .colors__button--blue {
-  background-color: var(--color__blue--primary);
-}
-.container .colors .colors__button--red {
-  background-color: var(--color__red--primary);
-}
-.container .colors .colors__button--orange {
-  background-color: var(--color__orange--primary);
-}
-.container .colors .colors__button--green {
-  background-color: var(--color__green--primary);
-}
-.container .colors .colors__button--black {
-  background-color: var(--color__black--primary);
+  transition: 0.2s ease-in-out;
 }
 
-.container .details .colors @media (max-width: 1080px) {
+.container .colors .colors__button:hover {
+  transform: scale(1.1);
+}
+.container .colors .colors__button--blue {
+  background-color: var(--color__blue);
+}
+.container .colors .colors__button--red {
+  background-color: var(--color__red);
+}
+.container .colors .colors__button--orange {
+  background-color: var(--color__orange);
+}
+.container .colors .colors__button--green {
+  background-color: var(--color__green);
+}
+.container .colors .colors__button--black {
+  background-color: var(--color__black);
+}
+
+@media (max-width: 1080px) {
   .container {
     height: auto;
   }
