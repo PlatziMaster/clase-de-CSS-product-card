@@ -1,6 +1,6 @@
-/* 
+/*
 
-Orden 
+Orden
 
 1. Position
 2. Box model
@@ -10,140 +10,238 @@ Orden
 
 */
 
+:root {
+  --darkIndex: 10%;
+  --lightIndex: 50%;
+  --color__blue: hsl(228, 73%, 22%);
+  --color__red: hsl(12, 100%, 27%);
+  --color__orange: hsl(18, 100%, 38%);
+  --color__green: hsl(99, 61%, 26%);
+  --color__black: hsl(220, 4%, 14%);
+  --color__blue--primary: hsl(228, 73%, calc(22% + var(--lightIndex)));
+  --color__blue--secondary: hsl(228, 73%, calc(22% - var(--darkIndex)));
+  --color__red--primary: hsl(12, 100%, calc(27% + var(--lightIndex)));
+  --color__red--secondary: hsl(12, 100%, calc(27% - var(--darkIndex)));
+  --color__orange--primary: hsl(18, 100%, calc(38% + var(--lightIndex)));
+  --color__orange--secondary: hsl(18, 100%, calc(38% - var(--darkIndex)));
+  --color__green--primary: hsl(99, 61%, calc(26% + var(--lightIndex)));
+  --color__green--secondary: hsl(99, 61%, calc(26% - var(--darkIndex)));
+  --color__black--primary: hsl(220, 4%, calc(14% + var(--lightIndex)));
+  --color__black--secondary: hsl(220, 4%, calc(14% - var(--darkIndex)));
+  --transition: ease 0.5s;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #070c24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color--secondary);
+  transition: var(--transition);
 }
 
-.container  {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 900px;
-    height: 600px;
-    margin: 20px;
-    background-color: #fff;
+body.blue {
+  --color--primary: var(--color__blue--primary);
+  --color--secondary: var(--color__blue--secondary);
+}
+body.red {
+  --color--primary: var(--color__red--primary);
+  --color--secondary: var(--color__red--secondary);
+}
+
+body.orange {
+  --color--primary: var(--color__orange--primary);
+  --color--secondary: var(--color__orange--secondary);
+}
+
+body.green {
+  --color--primary: var(--color__green--primary);
+  --color--secondary: var(--color__green--secondary);
+}
+
+body.black {
+  --color--primary: var(--color__black--primary);
+  --color--secondary: var(--color__black--secondary);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 900px;
+  height: 600px;
+  margin: 20px;
+  background-color: #fff;
 }
 
 .container .imgBox {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    background-color: #5466b1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: var(--color--primary);
+  transition: var(--transition);
 }
 
 .container .imgBox:before {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 8em;
-    font-weight: 800;
-    color: #000;
-    content: 'Nike';
-    opacity: 0.1;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 8em;
+  font-weight: 800;
+  color: var(--color--secondary);
+  content: "Nike";
+  opacity: 0.1;
 }
 
 .container .imgBox img {
-    position: relative;
-    left: -50px;
-    width: 700px;
-    transform: rotate(-30deg);
+  position: relative;
+  left: -50px;
+  width: 700px;
+  transform: rotate(-30deg);
 }
 
 .container .details {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 40px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 .container .details h2 {
-    margin-top: 45px;
-    margin-bottom: 25px;
-    font-size: 2.5em;
-    line-height: 0.8em;
-    color: #444;
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  line-height: 0.8em;
+  color: var(--color--secondary);
 }
 
 .container .details h2 span {
-    font-size: 0.4em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #999;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color--secondary);
 }
 
 .container .details p {
-    max-width: 85%;
-    margin-left: 15%;
-    margin-bottom: 35px;
-    color: #333;
-    font-size: 15px;
+  max-width: 85%;
+  margin-left: 15%;
+  margin-bottom: 35px;
+  color: #333;
+  font-size: 15px;
 }
 
 .container .details h3 {
-    float: left;
-    font-size: 2.5em;
-    color: #a2a2a2;
+  float: left;
+  font-size: 2.5em;
+  color: var(--color--secondary);
 }
 
 .container .details button {
-    margin-top: 5px;
-    float: right;
-    padding: 15px 20px;
-    font-size: 16px;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 40px;
-    background-color: #5466b1;
-    border: none;
-    cursor: pointer;
+  margin-top: 5px;
+  float: right;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: var(--color--secondary);
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 40px;
+  background-color: var(--color--primary);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+}
+
+.container .details button:hover {
+  background-color: var(--color--secondary);
+  color: var(--color--primary);
+}
+
+.container .colors {
+  position: absolute;
+  bottom: 4%;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: -6px 7px 17px rgba(0, 0, 0, 0.3),
+    -6px 7px 4px -5px rgba(0, 0, 0, 0.3);
+}
+
+.container .colors .colors__button {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  font-size: 0;
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.container .colors .colors__button:hover {
+  transform: scale(1.1);
+}
+.container .colors .colors__button--blue {
+  background-color: var(--color__blue);
+}
+.container .colors .colors__button--red {
+  background-color: var(--color__red);
+}
+.container .colors .colors__button--orange {
+  background-color: var(--color__orange);
+}
+.container .colors .colors__button--green {
+  background-color: var(--color__green);
+}
+.container .colors .colors__button--black {
+  background-color: var(--color__black);
 }
 
 @media (max-width: 1080px) {
-    .container {
-        height: auto;
-    }
+  .container {
+    height: auto;
+  }
 
-    .container .imgBox {
-        height: auto;
-        padding: 40px;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
+  .container .imgBox {
+    height: auto;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
 
-    .container .imgBox img {
-        left: initial;
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
+  .container .imgBox img {
+    left: initial;
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
 
-    .container .details {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
+  .container .details {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
 
-    .container .details p {
-        max-width: 100%;
-        margin-left: 0;
-    }
+  .container .details p {
+    max-width: 100%;
+    margin-left: 0;
+  }
 }
