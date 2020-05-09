@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product card</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
     <main class="container">
-        <div class="imgBox">
-            <img src="./assets/img/nike-blue.png" alt="Zapato deportivo Nike color azul, para correr">
+      <div id="box_blue" class="imgBox show">
+        <img
+          src="./assets/img/nike-blue.png"
+          alt="Zapato deportivo Nike color azul, para correr"
+        />
+      </div>
+      <div id="box_black" class="imgBox">
+        <img
+          src="./assets/img/nike-black.png"
+          alt="Zapato deportivo Nike color azul, para correr"
+        />
+      </div>
+      <div id="box_green" class="imgBox">
+        <img
+          src="./assets/img/nike-green.png"
+          alt="Zapato deportivo Nike color azul, para correr"
+        />
+      </div>
+      <div id="box_orange" class="imgBox">
+        <img
+          src="./assets/img/nike-orange.png"
+          alt="Zapato deportivo Nike color azul, para correr"
+        />
+      </div>
+      <div id="box_red" class="imgBox">
+        <img
+          src="./assets/img/nike-red.png"
+          alt="Zapato deportivo Nike color azul, para correr"
+        />
+      </div>
+      <div class="details">
+        <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          non esse quas qui quo tempora dignissimos earum soluta reiciendis
+          excepturi, autem modi distinctio, deleniti at officia amet atque neque
+          incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et
+          expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi
+          neque commodi esse hic, ad perferendis a repudiandae laboriosam
+          suscipit impedit voluptatibus. Qui, ipsam?
+        </p>
+        <h3>$2500</h3>
+        <button>Buy now</button>
+        <div class="colors">
+          <button id="button_blue" class="colors_blue"></button>
+          <button id="button_black" class="colors_black"></button>
+          <button id="button_green" class="colors_green"></button>
+          <button id="button_orange" class="colors_orange"></button>
+          <button id="button_red" class="colors_red"></button>
         </div>
-        <div class="details">
-            <h2>Nike Zoom 2020 <span>Runnin collection</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit non esse quas qui quo tempora dignissimos earum soluta reiciendis excepturi, autem modi distinctio, deleniti at officia amet atque neque incidunt?Voluptatibus aliquam itaque tempore corporis, saepe et expedita sed atque. Ipsa ducimus excepturi, quos molestiae, animi neque commodi esse hic, ad perferendis a repudiandae laboriosam suscipit impedit voluptatibus. Qui, ipsam?</p>
-            <h3>$2500</h3>
-            <button>Buy now</button>
-        </div>
+      </div>
     </main>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
