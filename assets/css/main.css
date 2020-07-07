@@ -24,7 +24,7 @@ body {
     background-color: #070c24;
 }
 
-.container  {
+.container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +115,52 @@ body {
     background-color: #5466b1;
     border: none;
     cursor: pointer;
+}
+
+.selectors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    right: 8em;
+    bottom: 2em;
+}
+
+.radio {
+    margin: 0 0.2em;
+}
+
+.color {
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 0.5em;
+}
+
+.black {
+    background-color: black;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+.transparent {
+    background-color: pink;
 }
 
 @media (max-width: 1080px) {
